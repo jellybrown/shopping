@@ -1,0 +1,66 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+body {
+  background: rgb(22, 14, 49);
+}
+
+img {
+  width: 40px;
+}
+
+/* start */
+header {
+  text-align: center;
+  padding-top: 50px;
+}
+header img {
+  width: 80px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 500px;
+}
+.filter_list {
+  display: flex;
+  justify-content: space-around;
+}
+.filter_list li {
+  display: inline-block;
+  cursor: pointer;
+}
+.filter_list .color_box {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.filter_list .blue {
+  background: dodgerblue;
+}
+.filter_list .yellow {
+  background: goldenrod;
+}
+.filter_list .pink {
+  background: palevioletred;
+}
+
+.clothes_list li {
+  background: #fff;
+  padding: 10px 0 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.clothes_list li img {
+  margin-right: 20px;
+}

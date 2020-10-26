@@ -1,21 +1,36 @@
-html,
+:root {
+  --background-color: rgb(27, 28, 39);
+  --button-font-size: 16px;
+  --border-radius: 3px;
+}
+
+/* COMMON */
+
 body {
   padding: 0;
   margin: 0;
+  height: 100vh;
 }
 ul,
 li {
   list-style: none;
+  padding: 0;
 }
 body {
-  background: rgb(22, 14, 49);
+  background: var(--background-color);
 }
-
+main {
+  height: 100%;
+}
+button {
+  padding: 0;
+  margin: 0;
+}
 img {
   width: 40px;
 }
 
-/* start */
+/* START */
 header {
   text-align: center;
   padding-top: 50px;
@@ -27,21 +42,37 @@ header img {
 .contents {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 500px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .filter_list {
+  width: 60%;
   display: flex;
   justify-content: space-around;
 }
-.filter_list li {
-  display: inline-block;
+.filter_list button {
+  border: none;
+  background: transparent;
+  outline: none;
   cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: 0.3s ease-in;
+}
+.filter_list button span {
+  height: 100%;
+  display: block;
+  line-height: 45px;
+  width: 50px;
+  padding: 0 10px;
+  font-size: var(--button-font-size);
+}
+.filter_list button:hover {
+  transform: scale(1.2);
 }
 .filter_list .color_box {
   display: flex;
   align-items: center;
-  padding: 0 10px;
 }
 .filter_list .blue {
   background: dodgerblue;
@@ -52,7 +83,11 @@ header img {
 .filter_list .pink {
   background: palevioletred;
 }
-
+.clothes_list {
+  width: 60%;
+  height: 60%;
+  overflow-y: scroll;
+}
 .clothes_list li {
   background: #fff;
   padding: 10px 0 10px 20px;
